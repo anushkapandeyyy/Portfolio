@@ -31,6 +31,50 @@ function App() {
   });
 
   useGSAP(() => {
+    if (!showContent) return;
+
+    gsap.to(".main", {
+      scale: 1,
+      rotate: 0,
+      duration: 2,
+      delay: "-1",
+      ease: "Expo.easeInOut",
+    });
+
+    gsap.to(".sky", {
+      scale: 1.1,
+      rotate: 0,
+      duration: 2,
+      delay: "-.8",
+      ease: "Expo.easeInOut",
+    });
+
+    gsap.to(".bg", {
+      scale: 1.1,
+      rotate: 0,
+      duration: 2,
+      delay: "-.8",
+      ease: "Expo.easeInOut",
+    });
+
+    gsap.to(".character", {
+      scale: 1.4,
+      x: "-50%",
+      bottom: "-25%",
+      rotate: 0,
+      duration: 2,
+      delay: "-.8",
+      ease: "Expo.easeInOut",
+    });
+
+    gsap.to(".text", {
+      scale: 1,
+      rotate: 0,
+      duration: 2,
+      delay: "-.8",
+      ease: "Expo.easeInOut",
+    });
+
     const main = document.querySelector(".main");
 
     main?.addEventListener("mousemove", function (e) {
@@ -79,8 +123,8 @@ function App() {
         </svg>
       </div>
       {showContent && (
-        <div className="main w-full">
-          <div className="landing w-full h-screen bg-black">
+        <div className="main w-full rotate-[-10deg] scale-[1.7]">
+          <div className="landing overflow-hidden relative w-full h-screen bg-black">
             <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10">
               <div className="logo flex gap-7">
                 <div className="lines flex flex-col gap-[5px]">
@@ -96,22 +140,22 @@ function App() {
 
             <div className="imagesdiv relative overflow-hidden w-full h-screen">
               <img
-                className="absolute sky scale-[1.2] top-0 left-0 w-full h-full object-cover"
+                className="absolute sky scale-[1.5] rotate-[-20deg] top-0 left-0 w-full h-full object-cover"
                 src="./sky.png"
                 alt=""
               />
               <img
-                className="absolute scale-[1.1] bg top-0 left-0 w-full h-full object-cover"
+                className="absolute scale-[1.8] rotate-[-3deg] bg top-0 left-0 w-full h-full object-cover"
                 src="./bg.png"
                 alt=""
               />
-              <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2">
+              <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
                 <h1 className="text-[12rem] leading-none -ml-40">grand</h1>
                 <h1 className="text-[12rem] leading-none ml-20">theft</h1>
                 <h1 className="text-[12rem] leading-none -ml-40">auto</h1>
               </div>
               <img
-                className="absolute character -bottom-[25%] left-1/2 -translate-x-1/2  scale-[1.4]"
+                className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2  scale-[3] rotate-[-20deg]"
                 src="./girlbg.png"
                 alt=""
               />
