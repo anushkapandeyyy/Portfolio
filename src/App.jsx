@@ -225,6 +225,66 @@ function App() {
       }
     });
 
+    // Interactive Image Reveal
+    const imageRevealContainer = document.querySelector('.image-reveal-container');
+    const revealImage = document.querySelector('.reveal-image');
+    const dividerLine = document.querySelector('.divider-line');
+    const cursorIndicator = document.querySelector('.cursor-indicator');
+
+    if (imageRevealContainer && revealImage && dividerLine && cursorIndicator) {
+      imageRevealContainer.addEventListener('mousemove', function(e) {
+        const rect = imageRevealContainer.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const containerWidth = rect.width;
+        const percentage = (mouseX / containerWidth) * 100;
+        
+        // Clamp percentage between 0 and 100
+        const clampedPercentage = Math.max(0, Math.min(100, percentage));
+        
+        // Update clip-path for reveal effect
+        revealImage.style.clipPath = `inset(0 ${100 - clampedPercentage}% 0 0)`;
+        
+        // Update divider line position
+        dividerLine.style.left = `${clampedPercentage}%`;
+        
+        // Update cursor indicator position
+        cursorIndicator.style.left = `${clampedPercentage}%`;
+        cursorIndicator.style.opacity = '1';
+        
+        // Add subtle tilt effect based on mouse position
+        const tilt = (clampedPercentage - 50) / 10;
+        gsap.to(imageRevealContainer, {
+          rotateY: tilt,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+      
+      imageRevealContainer.addEventListener('mouseenter', function() {
+        cursorIndicator.style.opacity = '1';
+        gsap.to(imageRevealContainer, {
+          scale: 1.02,
+          duration: 0.3,
+          ease: "power2.out"
+        });
+      });
+      
+      imageRevealContainer.addEventListener('mouseleave', function() {
+        // Reset to center position
+        revealImage.style.clipPath = 'inset(0 50% 0 0)';
+        dividerLine.style.left = '50%';
+        cursorIndicator.style.left = '50%';
+        cursorIndicator.style.opacity = '0';
+        
+        gsap.to(imageRevealContainer, {
+          rotateY: 0,
+          scale: 1,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      });
+    }
+
   }, [showContent]);
 
   return (
@@ -631,8 +691,70 @@ function App() {
             </div>
           </div>
 
+          {/* Interactive Image Reveal Section */}
+          <div className="w-full min-h-screen bg-gradient-to-b from-black to-gray-900 py-20 relative overflow-hidden">
+            <div className="container mx-auto px-10 max-w-7xl">
+              <div className="text-center mb-16">
+                <span className="text-yellow-500 text-lg font-semibold tracking-wider uppercase">IDENTITY</span>
+                <h2 className="text-white text-6xl font-black mt-4 mb-8">
+                  BEHIND THE MASK
+                </h2>
+                <p className="text-gray-300 text-xl max-w-2xl mx-auto leading-relaxed">
+                  Move your cursor across the image to reveal the real me
+                </p>
+              </div>
+
+              <div className="flex justify-center">
+                <div className="image-reveal-container relative w-full max-w-2xl aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                  {/* Labels */}
+                  <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <span className="text-white font-semibold">BLUR</span>
+                  </div>
+                  <div className="absolute top-4 right-4 z-20 bg-black/70 backdrop-blur-sm px-4 py-2 rounded-lg">
+                    <span className="text-white font-semibold">REAL</span>
+                  </div>
+
+                  {/* Blurred Image (Base Layer) */}
+                  <img
+                    src="./anushka-blur.jpeg"
+                    alt="Blurred version"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
+                  {/* Real Image (Reveal Layer) */}
+                  <img
+                    src="./anushka-real.jpeg"
+                    alt="Clear version"
+                    className="reveal-image absolute inset-0 w-full h-full object-cover"
+                    style={{ clipPath: 'inset(0 50% 0 0)' }}
+                  />
+
+                  {/* Divider Line */}
+                  <div 
+                    className="divider-line absolute top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-500 via-yellow-400 to-yellow-500 shadow-[0_0_20px_rgba(251,191,36,0.8)] z-10"
+                    style={{ left: '50%', transform: 'translateX(-50%)' }}
+                  ></div>
+
+                  {/* Cursor Indicator */}
+                  <div className="cursor-indicator absolute top-1/2 w-8 h-8 bg-yellow-500 rounded-full shadow-lg z-10 pointer-events-none opacity-0 transition-opacity duration-300"
+                    style={{ left: '50%', transform: 'translate(-50%, -50%)' }}
+                  >
+                    <div className="w-full h-full rounded-full animate-ping bg-yellow-400"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center mt-8">
+                <p className="text-gray-400 text-lg">
+                  <i className="ri-mouse-line mr-2"></i>
+                  Move your mouse horizontally to reveal
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Footer Section with Social Links */}
-          <div className="w-full bg-black py-16 relative">
+          <div className="w-full bg-black py-16 relative"></div>
             <div className="container mx-auto px-10 max-w-7xl">
               <div className="text-center mb-12">
                 <h3 className="text-white text-4xl font-black mb-4">CONNECT WITH ME</h3>
