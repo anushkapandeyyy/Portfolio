@@ -227,7 +227,7 @@ function App() {
             <div className="container mx-auto px-10 max-w-6xl">
               <div className="text-center mb-20">
                 <span className="text-yellow-500 text-lg font-semibold tracking-wider">CAREER PATH</span>
-                <h2 className="text-white text-8xl font-black mt-4">
+                <h2 className="text-white text-5xl font-black mt-4">
                   EXPERIENCE
                 </h2>
               </div>
@@ -241,8 +241,8 @@ function App() {
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
                     <div className="text-white">
-                      <h3 className="text-3xl font-bold mb-2">Worked in Los Santos Police Department</h3>
-                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                      <h3 className="text-2xl font-bold mb-2">Worked in Los Santos Police Department</h3>
+                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
                         Started as a rookie cop, learned the ins and outs of the criminal underworld. 
                         Gained valuable skills in investigation and law enforcement tactics.
                       </p>
@@ -252,8 +252,8 @@ function App() {
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
                     <div className="text-white">
-                      <h3 className="text-3xl font-bold mb-2">Worked in Underground Racing Circuit</h3>
-                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                      <h3 className="text-2xl font-bold mb-2">Worked in Underground Racing Circuit</h3>
+                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
                         Mastered high-speed driving and vehicle customization. 
                         Built reputation as one of the fastest drivers in the city.
                       </p>
@@ -263,8 +263,8 @@ function App() {
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
                     <div className="text-white">
-                      <h3 className="text-3xl font-bold mb-2">Worked in Private Security Firm</h3>
-                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                      <h3 className="text-2xl font-bold mb-2">Worked in Private Security Firm</h3>
+                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
                         Specialized in VIP protection and tactical operations. 
                         Developed advanced combat skills and strategic planning abilities.
                       </p>
@@ -274,8 +274,8 @@ function App() {
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
                     <div className="text-white">
-                      <h3 className="text-3xl font-bold mb-2">Worked in Criminal Organization</h3>
-                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                      <h3 className="text-2xl font-bold mb-2">Worked in Criminal Organization</h3>
+                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
                         Rose through the ranks of the criminal underworld. 
                         Planned and executed major heists and operations across the city.
                       </p>
@@ -285,8 +285,8 @@ function App() {
                   <div className="flex items-start">
                     <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
                     <div className="text-white">
-                      <h3 className="text-3xl font-bold mb-2">Worked as Independent Contractor</h3>
-                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                      <h3 className="text-2xl font-bold mb-2">Worked as Independent Contractor</h3>
+                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
                         Now operating as a freelance criminal for hire. 
                         Taking on the most dangerous and lucrative jobs in Los Santos.
                       </p>
@@ -297,139 +297,7 @@ function App() {
             </div>
           </div>
 
-          {/* Skills Section */}
-          <div className="w-full min-h-screen bg-black py-20">
-            <div className="container mx-auto px-10">
-              <div className="text-center mb-20">
-                <span className="text-yellow-500 text-lg font-semibold tracking-wider">CHARACTER STATS</span>
-                <h2 className="text-white text-8xl font-black mt-4">
-                  SKILLS
-                </h2>
-              </div>
-              <div className="max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-                  <div className="space-y-8">
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Driving</span>
-                        <span className="text-yellow-500 text-xl">95%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '95%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Shooting</span>
-                        <span className="text-yellow-500 text-xl">88%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '88%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Stealth</span>
-                        <span className="text-yellow-500 text-xl">72%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '72%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Flying</span>
-                        <span className="text-yellow-500 text-xl">65%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '65%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Stamina</span>
-                        <span className="text-yellow-500 text-xl">80%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '80%'}}></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="space-y-8">
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Strength</span>
-                        <span className="text-yellow-500 text-xl">85%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '85%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Lung Capacity</span>
-                        <span className="text-yellow-500 text-xl">78%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '78%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Special Ability</span>
-                        <span className="text-yellow-500 text-xl">92%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '92%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Mental State</span>
-                        <span className="text-yellow-500 text-xl">68%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '68%'}}></div>
-                      </div>
-                    </div>
-
-                    <div className="skill-item">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="text-white text-2xl font-bold">Criminal Record</span>
-                        <span className="text-yellow-500 text-xl">100%</span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-4">
-                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '100%'}}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-16 text-center">
-                  <h3 className="text-white text-4xl font-bold mb-8">Special Abilities</h3>
-                  <div className="flex justify-center gap-8 flex-wrap">
-                    <div className="bg-black border-2 border-yellow-500 px-8 py-4 text-yellow-500 text-xl font-bold">
-                      BULLET TIME
-                    </div>
-                    <div className="bg-black border-2 border-yellow-500 px-8 py-4 text-yellow-500 text-xl font-bold">
-                      RAGE MODE
-                    </div>
-                    <div className="bg-black border-2 border-yellow-500 px-8 py-4 text-yellow-500 text-xl font-bold">
-                      FOCUS MODE
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
         </div>
       )}
     </>
