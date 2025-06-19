@@ -224,7 +224,7 @@ function App() {
 
           {/* Experience Section */}
           <div className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-black py-20">
-            <div className="container mx-auto px-10 max-w-6xl">
+            <div className="container mx-auto px-10 max-w-7xl">
               <div className="text-center mb-20">
                 <span className="text-yellow-500 text-lg font-semibold tracking-wider">CAREER PATH</span>
                 <h2 className="text-white text-5xl font-black mt-4">
@@ -232,64 +232,76 @@ function App() {
                 </h2>
               </div>
               
-              <div className="relative">
-                {/* Vertical Line */}
-                <div className="absolute left-8 top-0 bottom-0 w-1 bg-yellow-500"></div>
-                
-                {/* Timeline Items */}
-                <div className="space-y-12">
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
-                    <div className="text-white">
-                      <h3 className="text-2xl font-bold mb-2">Worked in Los Santos Police Department</h3>
-                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                        Started as a rookie cop, learned the ins and outs of the criminal underworld. 
-                        Gained valuable skills in investigation and law enforcement tactics.
-                      </p>
-                    </div>
-                  </div>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                {/* Left side - Character Image */}
+                <div className="relative h-[600px] flex items-center justify-center">
+                  <img
+                    className="scale-[1.2] drop-shadow-2xl"
+                    src="./girlbg.png"
+                    alt="Character"
+                  />
+                </div>
 
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
-                    <div className="text-white">
-                      <h3 className="text-2xl font-bold mb-2">Worked in Underground Racing Circuit</h3>
-                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                        Mastered high-speed driving and vehicle customization. 
-                        Built reputation as one of the fastest drivers in the city.
-                      </p>
+                {/* Right side - Experience Timeline */}
+                <div className="relative">
+                  {/* Vertical Line */}
+                  <div className="absolute left-8 top-0 bottom-0 w-1 bg-yellow-500"></div>
+                  
+                  {/* Timeline Items */}
+                  <div className="space-y-12">
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                      <div className="text-white">
+                        <h3 className="text-2xl font-bold mb-2">Worked in Los Santos Police Department</h3>
+                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
+                          Started as a rookie cop, learned the ins and outs of the criminal underworld. 
+                          Gained valuable skills in investigation and law enforcement tactics.
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
-                    <div className="text-white">
-                      <h3 className="text-2xl font-bold mb-2">Worked in Private Security Firm</h3>
-                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                        Specialized in VIP protection and tactical operations. 
-                        Developed advanced combat skills and strategic planning abilities.
-                      </p>
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                      <div className="text-white">
+                        <h3 className="text-2xl font-bold mb-2">Worked in Underground Racing Circuit</h3>
+                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
+                          Mastered high-speed driving and vehicle customization. 
+                          Built reputation as one of the fastest drivers in the city.
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
-                    <div className="text-white">
-                      <h3 className="text-2xl font-bold mb-2">Worked in Criminal Organization</h3>
-                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                        Rose through the ranks of the criminal underworld. 
-                        Planned and executed major heists and operations across the city.
-                      </p>
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                      <div className="text-white">
+                        <h3 className="text-2xl font-bold mb-2">Worked in Private Security Firm</h3>
+                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
+                          Specialized in VIP protection and tactical operations. 
+                          Developed advanced combat skills and strategic planning abilities.
+                        </p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="flex items-start">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
-                    <div className="text-white">
-                      <h3 className="text-2xl font-bold mb-2">Worked as Independent Contractor</h3>
-                      <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                        Now operating as a freelance criminal for hire. 
-                        Taking on the most dangerous and lucrative jobs in Los Santos.
-                      </p>
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                      <div className="text-white">
+                        <h3 className="text-2xl font-bold mb-2">Worked in Criminal Organization</h3>
+                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
+                          Rose through the ranks of the criminal underworld. 
+                          Planned and executed major heists and operations across the city.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start">
+                      <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                      <div className="text-white">
+                        <h3 className="text-2xl font-bold mb-2">Worked as Independent Contractor</h3>
+                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
+                          Now operating as a freelance criminal for hire. 
+                          Taking on the most dangerous and lucrative jobs in Los Santos.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
