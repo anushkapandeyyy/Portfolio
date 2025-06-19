@@ -228,10 +228,9 @@ function App() {
     // Interactive Image Reveal
     const imageRevealContainer = document.querySelector('.image-reveal-container');
     const revealImage = document.querySelector('.reveal-image');
-    const dividerLine = document.querySelector('.divider-line');
     const cursorIndicator = document.querySelector('.cursor-indicator');
 
-    if (imageRevealContainer && revealImage && dividerLine && cursorIndicator) {
+    if (imageRevealContainer && revealImage && cursorIndicator) {
       imageRevealContainer.addEventListener('mousemove', function(e) {
         const rect = imageRevealContainer.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
@@ -243,9 +242,6 @@ function App() {
         
         // Update clip-path for reveal effect
         revealImage.style.clipPath = `inset(0 ${100 - clampedPercentage}% 0 0)`;
-        
-        // Update divider line position
-        dividerLine.style.left = `${clampedPercentage}%`;
         
         // Update cursor indicator position
         cursorIndicator.style.left = `${clampedPercentage}%`;
@@ -272,7 +268,6 @@ function App() {
       imageRevealContainer.addEventListener('mouseleave', function() {
         // Reset to center position
         revealImage.style.clipPath = 'inset(0 50% 0 0)';
-        dividerLine.style.left = '50%';
         cursorIndicator.style.left = '50%';
         cursorIndicator.style.opacity = '0';
         
@@ -700,20 +695,21 @@ function App() {
                   BEHIND THE MASK
                 </h2>
                 <p className="text-gray-300 text-xl max-w-2xl mx-auto leading-relaxed">
-                  Move your cursor across the image to reveal the real me
+                  Move your cursor across the image to reveal the transformation
                 </p>
               </div>
 
-              <div className="flex justify-center">
-                <div className="image-reveal-container relative w-full max-w-2xl aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                  {/* Labels */}
-                  <div className="absolute top-4 left-4 z-20 bg-black/70 backdrop-blur-sm px-4 py-2 rounded-lg">
-                    <span className="text-white font-semibold">BLUR</span>
-                  </div>
-                  <div className="absolute top-4 right-4 z-20 bg-black/70 backdrop-blur-sm px-4 py-2 rounded-lg">
-                    <span className="text-white font-semibold">REAL</span>
-                  </div>
+              <div className="flex justify-center items-center gap-16">
+                {/* Left Text - Designer */}
+                <div className="text-left flex-1 max-w-xs">
+                  <h3 className="text-white text-5xl font-black mb-4 tracking-wider">designer</h3>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Creative designer specializing in UI design and visual systems.
+                  </p>
+                </div>
 
+                {/* Image Container */}
+                <div className="image-reveal-container relative w-full max-w-lg aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                   {/* Blurred Image (Base Layer) */}
                   <img
                     src="./anushka-blur.jpeg"
@@ -729,25 +725,46 @@ function App() {
                     style={{ clipPath: 'inset(0 50% 0 0)' }}
                   />
 
-                  {/* Divider Line */}
-                  <div 
-                    className="divider-line absolute top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-500 via-yellow-400 to-yellow-500 shadow-[0_0_20px_rgba(251,191,36,0.8)] z-10"
-                    style={{ left: '50%', transform: 'translateX(-50%)' }}
-                  ></div>
-
-                  {/* Cursor Indicator */}
-                  <div className="cursor-indicator absolute top-1/2 w-8 h-8 bg-yellow-500 rounded-full shadow-lg z-10 pointer-events-none opacity-0 transition-opacity duration-300"
+                  {/* Custom Cursor Indicator */}
+                  <div className="cursor-indicator absolute top-1/2 pointer-events-none opacity-0 transition-all duration-300 z-20"
                     style={{ left: '50%', transform: 'translate(-50%, -50%)' }}
                   >
-                    <div className="w-full h-full rounded-full animate-ping bg-yellow-400"></div>
+                    <div className="relative">
+                      {/* Outer ring */}
+                      <div className="w-12 h-12 border-2 border-yellow-500 rounded-full animate-spin-slow bg-black/20 backdrop-blur-sm"></div>
+                      {/* Inner dot */}
+                      <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-yellow-500 rounded-full transform -translate-x-1/2 -translate-y-1/2 animate-pulse"></div>
+                      {/* Arrow indicators */}
+                      <div className="absolute -left-8 top-1/2 transform -translate-y-1/2">
+                        <i className="ri-arrow-left-line text-yellow-500 text-xl animate-bounce-x"></i>
+                      </div>
+                      <div className="absolute -right-8 top-1/2 transform -translate-y-1/2">
+                        <i className="ri-arrow-right-line text-yellow-500 text-xl animate-bounce-x"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Text - Coder */}
+                <div className="text-right flex-1 max-w-xs">
+                  <h3 className="text-white text-5xl font-black mb-4 tracking-wider font-mono">&lt;coder&gt;</h3>
+                  <p className="text-gray-300 text-lg leading-relaxed">
+                    Front end developer who writes clean, elegant and efficient code.
+                  </p>
+                  <div className="mt-4 text-sm text-gray-500 font-mono">
+                    <div>&lt;html&gt;</div>
+                    <div className="ml-4">&lt;script&gt;</div>
+                    <div className="ml-8">CSS3 HTML5</div>
+                    <div className="ml-8">color: #000;</div>
+                    <div className="ml-4">&lt;/query&gt;</div>
                   </div>
                 </div>
               </div>
 
-              <div className="text-center mt-8">
+              <div className="text-center mt-12">
                 <p className="text-gray-400 text-lg">
                   <i className="ri-mouse-line mr-2"></i>
-                  Move your mouse horizontally to reveal
+                  Move your mouse horizontally across the image
                 </p>
               </div>
             </div>
