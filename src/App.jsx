@@ -513,178 +513,7 @@ function App() {
             </div>
           </div>
 
-          {/* Achievements Section with Crazy 3D Effects */}
-          <div className="w-full bg-gradient-to-b from-black via-gray-900 to-black py-20 relative overflow-hidden achievements-section perspective-1000">
-            {/* Dynamic Floating Orbs */}
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="floating-orb absolute top-10 left-10 w-64 h-64 bg-yellow-500/20 rounded-full blur-3xl animate-float-slow"></div>
-              <div className="floating-orb absolute bottom-20 right-20 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl animate-float-medium"></div>
-              <div className="floating-orb absolute top-1/2 left-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl animate-float-fast"></div>
-              <div className="floating-orb absolute top-1/4 right-1/3 w-40 h-40 bg-red-500/15 rounded-full blur-3xl animate-float-reverse"></div>
-              <div className="floating-orb absolute bottom-1/3 left-1/2 w-56 h-56 bg-green-500/15 rounded-full blur-3xl animate-float-slow"></div>
-            </div>
-
-            {/* Matrix Rain Effect */}
-            <div className="matrix-rain absolute inset-0 pointer-events-none opacity-5">
-              <div className="matrix-column" style={{left: '10%', animationDelay: '0s'}}></div>
-              <div className="matrix-column" style={{left: '25%', animationDelay: '1s'}}></div>
-              <div className="matrix-column" style={{left: '40%', animationDelay: '2s'}}></div>
-              <div className="matrix-column" style={{left: '55%', animationDelay: '0.5s'}}></div>
-              <div className="matrix-column" style={{left: '70%', animationDelay: '1.5s'}}></div>
-              <div className="matrix-column" style={{left: '85%', animationDelay: '2.5s'}}></div>
-            </div>
-            
-            <div className="container mx-auto px-10 max-w-7xl relative z-10">
-              <div className="text-center mb-16">
-                <span className="text-yellow-500 text-lg font-semibold tracking-wider uppercase animate-pulse">LEGACY</span>
-                <h2 className="text-white text-6xl font-black mt-4 transform hover:scale-110 hover:rotate-2 transition-all duration-500 hover:text-shadow-glow animate-gradient-text">
-                  ACHIEVEMENTS
-                </h2>
-                <p className="text-gray-300 text-xl mt-6 max-w-2xl mx-auto leading-relaxed hover:text-white transition-colors duration-300">
-                  Milestones and accomplishments throughout my criminal career in Los Santos
-                </p>
-              </div>
-              
-              {/* Achievement Grid with 3D Effects */}
-              <div className="achievements-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="achievements-grid">
-                
-                {/* Achievement 1 */}
-                <div className="achievement-card bg-gradient-to-br from-gray-900/90 to-gray-800/70 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform transition-all duration-500 group preserve-3d hover:shadow-[0_0_80px_rgba(251,191,36,0.6)] hover:-translate-y-4 hover:rotate-y-12 hover:rotate-x-5">
-                  {/* Floating Particles */}
-                  <div className="particles absolute inset-0 pointer-events-none">
-                    <div className="particle absolute top-4 left-4 w-2 h-2 bg-yellow-500 rounded-full animate-bounce opacity-70"></div>
-                    <div className="particle absolute top-6 right-6 w-1 h-1 bg-yellow-400 rounded-full animate-ping opacity-60"></div>
-                    <div className="particle absolute bottom-8 left-6 w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse opacity-50"></div>
-                  </div>
-                  
-                  <div className="text-center mb-6 relative z-10">
-                    <div className="w-20 h-20 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-500/40 transition-all duration-500 group-hover:scale-125 group-hover:rotate-360 animate-glow-pulse">
-                      <i className="ri-trophy-line text-3xl text-yellow-500 group-hover:text-yellow-300 transition-colors duration-300"></i>
-                    </div>
-                    <span className="text-yellow-500 text-sm font-semibold tracking-wider uppercase group-hover:text-yellow-300 transition-colors">HEIST MASTER</span>
-                  </div>
-                  <h3 className="text-white text-2xl font-black mb-4 text-center group-hover:text-yellow-100 transition-colors duration-300">100+ SUCCESSFUL HEISTS</h3>
-                  <p className="text-gray-300 text-lg text-center leading-relaxed group-hover:text-gray-100 transition-colors duration-300">
-                    Completed over 100 major heists without getting caught, establishing reputation as the most reliable criminal in the city.
-                  </p>
-                  
-                  {/* 3D Glowing Border */}
-                  <div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-yellow-500/30 via-transparent to-yellow-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-border-glow"></div>
-                </div>
-
-                {/* Achievement 2 */}
-                <div className="achievement-card bg-gradient-to-br from-gray-900/90 to-gray-800/70 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform transition-all duration-500 group preserve-3d hover:shadow-[0_0_80px_rgba(239,68,68,0.6)] hover:-translate-y-4 hover:rotate-y-12 hover:rotate-x-5">
-                  <div className="particles absolute inset-0 pointer-events-none">
-                    <div className="particle absolute top-4 right-4 w-2 h-2 bg-red-500 rounded-full animate-bounce opacity-70" style={{animationDelay: '0.5s'}}></div>
-                    <div className="particle absolute top-8 left-8 w-1 h-1 bg-red-400 rounded-full animate-ping opacity-60"></div>
-                    <div className="particle absolute bottom-6 right-8 w-1.5 h-1.5 bg-red-300 rounded-full animate-pulse opacity-50"></div>
-                  </div>
-                  
-                  <div className="text-center mb-6 relative z-10">
-                    <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500/40 transition-all duration-500 group-hover:scale-125 group-hover:rotate-360 animate-glow-pulse">
-                      <i className="ri-car-line text-3xl text-red-500 group-hover:text-red-300 transition-colors duration-300"></i>
-                    </div>
-                    <span className="text-red-500 text-sm font-semibold tracking-wider uppercase group-hover:text-red-300 transition-colors">SPEED DEMON</span>
-                  </div>
-                  <h3 className="text-white text-2xl font-black mb-4 text-center group-hover:text-red-100 transition-colors duration-300">STREET RACING CHAMPION</h3>
-                  <p className="text-gray-300 text-lg text-center leading-relaxed group-hover:text-gray-100 transition-colors duration-300">
-                    Won the underground racing championship 5 times in a row, dominating the streets of Los Santos with unmatched driving skills.
-                  </p>
-                  
-                  <div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-red-500/30 via-transparent to-red-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-border-glow"></div>
-                </div>
-
-                {/* Achievement 3 */}
-                <div className="achievement-card bg-gradient-to-br from-gray-900/90 to-gray-800/70 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform transition-all duration-500 group preserve-3d hover:shadow-[0_0_80px_rgba(34,197,94,0.6)] hover:-translate-y-4 hover:rotate-y-12 hover:rotate-x-5">
-                  <div className="particles absolute inset-0 pointer-events-none">
-                    <div className="particle absolute top-6 left-4 w-2 h-2 bg-green-500 rounded-full animate-bounce opacity-70" style={{animationDelay: '1s'}}></div>
-                    <div className="particle absolute top-4 right-6 w-1 h-1 bg-green-400 rounded-full animate-ping opacity-60"></div>
-                    <div className="particle absolute bottom-4 left-8 w-1.5 h-1.5 bg-green-300 rounded-full animate-pulse opacity-50"></div>
-                  </div>
-                  
-                  <div className="text-center mb-6 relative z-10">
-                    <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/40 transition-all duration-500 group-hover:scale-125 group-hover:rotate-360 animate-glow-pulse">
-                      <i className="ri-money-dollar-circle-line text-3xl text-green-500 group-hover:text-green-300 transition-colors duration-300"></i>
-                    </div>
-                    <span className="text-green-500 text-sm font-semibold tracking-wider uppercase group-hover:text-green-300 transition-colors">BIG SCORE</span>
-                  </div>
-                  <h3 className="text-white text-2xl font-black mb-4 text-center group-hover:text-green-100 transition-colors duration-300">$50M+ STOLEN</h3>
-                  <p className="text-gray-300 text-lg text-center leading-relaxed group-hover:text-gray-100 transition-colors duration-300">
-                    Accumulated over $50 million through various criminal activities, becoming one of the wealthiest criminals in the underworld.
-                  </p>
-                  
-                  <div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-green-500/30 via-transparent to-green-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-border-glow"></div>
-                </div>
-
-                {/* Achievement 4 */}
-                <div className="achievement-card bg-gradient-to-br from-gray-900/90 to-gray-800/70 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform transition-all duration-500 group preserve-3d hover:shadow-[0_0_80px_rgba(168,85,247,0.6)] hover:-translate-y-4 hover:rotate-y-12 hover:rotate-x-5">
-                  <div className="particles absolute inset-0 pointer-events-none">
-                    <div className="particle absolute top-8 right-4 w-2 h-2 bg-purple-500 rounded-full animate-bounce opacity-70" style={{animationDelay: '1.5s'}}></div>
-                    <div className="particle absolute top-6 left-6 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-60"></div>
-                    <div className="particle absolute bottom-6 right-6 w-1.5 h-1.5 bg-purple-300 rounded-full animate-pulse opacity-50"></div>
-                  </div>
-                  
-                  <div className="text-center mb-6 relative z-10">
-                    <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/40 transition-all duration-500 group-hover:scale-125 group-hover:rotate-360 animate-glow-pulse">
-                      <i className="ri-skull-line text-3xl text-purple-500 group-hover:text-purple-300 transition-colors duration-300"></i>
-                    </div>
-                    <span className="text-purple-500 text-sm font-semibold tracking-wider uppercase group-hover:text-purple-300 transition-colors">SURVIVOR</span>
-                  </div>
-                  <h3 className="text-white text-2xl font-black mb-4 text-center group-hover:text-purple-100 transition-colors duration-300">ESCAPED DEATH 50 TIMES</h3>
-                  <p className="text-gray-300 text-lg text-center leading-relaxed group-hover:text-gray-100 transition-colors duration-300">
-                    Survived countless shootouts and dangerous situations, proving to be nearly indestructible in the face of danger.
-                  </p>
-                  
-                  <div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-purple-500/30 via-transparent to-purple-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-border-glow"></div>
-                </div>
-
-                {/* Achievement 5 */}
-                <div className="achievement-card bg-gradient-to-br from-gray-900/90 to-gray-800/70 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform transition-all duration-500 group preserve-3d hover:shadow-[0_0_80px_rgba(59,130,246,0.6)] hover:-translate-y-4 hover:rotate-y-12 hover:rotate-x-5">
-                  <div className="particles absolute inset-0 pointer-events-none">
-                    <div className="particle absolute top-4 left-8 w-2 h-2 bg-blue-500 rounded-full animate-bounce opacity-70" style={{animationDelay: '2s'}}></div>
-                    <div className="particle absolute top-8 right-4 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-60"></div>
-                    <div className="particle absolute bottom-8 left-4 w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse opacity-50"></div>
-                  </div>
-                  
-                  <div className="text-center mb-6 relative z-10">
-                    <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/40 transition-all duration-500 group-hover:scale-125 group-hover:rotate-360 animate-glow-pulse">
-                      <i className="ri-shield-star-line text-3xl text-blue-500 group-hover:text-blue-300 transition-colors duration-300"></i>
-                    </div>
-                    <span className="text-blue-500 text-sm font-semibold tracking-wider uppercase group-hover:text-blue-300 transition-colors">MASTERMIND</span>
-                  </div>
-                  <h3 className="text-white text-2xl font-black mb-4 text-center group-hover:text-blue-100 transition-colors duration-300">CRIMINAL MASTERMIND</h3>
-                  <p className="text-gray-300 text-lg text-center leading-relaxed group-hover:text-gray-100 transition-colors duration-300">
-                    Planned and executed the most complex criminal operations, outsmarting law enforcement and rival gangs consistently.
-                  </p>
-                  
-                  <div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-blue-500/30 via-transparent to-blue-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-border-glow"></div>
-                </div>
-
-                {/* Achievement 6 */}
-                <div className="achievement-card bg-gradient-to-br from-gray-900/90 to-gray-800/70 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform transition-all duration-500 group preserve-3d hover:shadow-[0_0_80px_rgba(249,115,22,0.6)] hover:-translate-y-4 hover:rotate-y-12 hover:rotate-x-5">
-                  <div className="particles absolute inset-0 pointer-events-none">
-                    <div className="particle absolute top-6 right-8 w-2 h-2 bg-orange-500 rounded-full animate-bounce opacity-70" style={{animationDelay: '2.5s'}}></div>
-                    <div className="particle absolute top-4 left-4 w-1 h-1 bg-orange-400 rounded-full animate-ping opacity-60"></div>
-                    <div className="particle absolute bottom-4 right-4 w-1.5 h-1.5 bg-orange-300 rounded-full animate-pulse opacity-50"></div>
-                  </div>
-                  
-                  <div className="text-center mb-6 relative z-10">
-                    <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500/40 transition-all duration-500 group-hover:scale-125 group-hover:rotate-360 animate-glow-pulse">
-                      <i className="ri-fire-line text-3xl text-orange-500 group-hover:text-orange-300 transition-colors duration-300"></i>
-                    </div>
-                    <span className="text-orange-500 text-sm font-semibold tracking-wider uppercase group-hover:text-orange-300 transition-colors">LEGEND</span>
-                  </div>
-                  <h3 className="text-white text-2xl font-black mb-4 text-center group-hover:text-orange-100 transition-colors duration-300">HALL OF FAME</h3>
-                  <p className="text-gray-300 text-lg text-center leading-relaxed group-hover:text-gray-100 transition-colors duration-300">
-                    Inducted into the criminal hall of fame, recognized as one of the greatest criminals in Los Santos history.
-                  </p>
-                  
-                  <div className="absolute inset-0 border-2 border-transparent bg-gradient-to-r from-orange-500/30 via-transparent to-orange-500/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-border-glow"></div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+          
 
           {/* Interactive Image Reveal Section */}
           <div className="w-full min-h-screen bg-gradient-to-b from-black to-gray-900 py-20 relative overflow-hidden">
@@ -710,17 +539,17 @@ function App() {
 
                 {/* Image Container */}
                 <div className="image-reveal-container relative w-full max-w-lg aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                  {/* Blurred Image (Base Layer) */}
-                  <img
-                    src="./anushka-blur.jpeg"
-                    alt="Blurred version"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-
-                  {/* Real Image (Reveal Layer) */}
+                  {/* Real Image (Base Layer) */}
                   <img
                     src="./anushka-real.jpeg"
                     alt="Clear version"
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+
+                  {/* Blurred Image (Reveal Layer) */}
+                  <img
+                    src="./anushka-blur.jpeg"
+                    alt="Blurred version"
                     className="reveal-image absolute inset-0 w-full h-full object-cover"
                     style={{ clipPath: 'inset(0 50% 0 0)' }}
                   />
@@ -770,56 +599,51 @@ function App() {
             </div>
           </div>
 
-          {/* Footer Section with Social Links */}
-          <div className="w-full bg-black py-16 relative">
-            <div className="container mx-auto px-10 max-w-7xl">
-              <div className="text-center mb-12">
-                <h3 className="text-white text-4xl font-black mb-4">CONNECT WITH ME</h3>
-                <p className="text-gray-400 text-lg">Follow my criminal adventures on social media</p>
+          {/* Enhanced Social Links Section */}
+          <div className="w-full bg-gradient-to-b from-black to-gray-900 py-12 relative overflow-hidden">
+            <div className="container mx-auto px-10 max-w-4xl">
+              <div className="text-center mb-8">
+                <span className="text-yellow-500 text-sm font-semibold tracking-wider uppercase">CONNECT</span>
+                <h3 className="text-white text-2xl font-bold mb-2">Let's Stay Connected</h3>
+                <p className="text-gray-400 text-sm">Follow for updates and collaborations</p>
               </div>
               
-              {/* Social Media Links */}
-              <div className="flex justify-center gap-8">
-                <a href="#" className="group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
-                    <i className="ri-facebook-fill text-2xl text-white"></i>
+              {/* Compact Social Media Links with 3D Effects */}
+              <div className="flex justify-center gap-4 perspective-1000">
+                <a href="#" className="social-link group">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-y-180 shadow-lg group-hover:shadow-[0_0_25px_rgba(0,119,181,0.6)] preserve-3d">
+                    <i className="ri-linkedin-fill text-lg text-white group-hover:text-blue-200"></i>
                   </div>
                 </a>
                 
-                <a href="#" className="group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-600 to-purple-700 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(219,39,119,0.5)]">
-                    <i className="ri-instagram-line text-2xl text-white"></i>
+                <a href="#" className="social-link group">
+                  <div className="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-y-180 shadow-lg group-hover:shadow-[0_0_25px_rgba(14,165,233,0.6)] preserve-3d">
+                    <i className="ri-twitter-x-line text-lg text-white group-hover:text-sky-200"></i>
                   </div>
                 </a>
                 
-                <a href="#" className="group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]">
-                    <i className="ri-twitter-x-line text-2xl text-white"></i>
+                <a href="#" className="social-link group">
+                  <div className="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-y-180 shadow-lg group-hover:shadow-[0_0_25px_rgba(75,85,99,0.6)] preserve-3d">
+                    <i className="ri-github-line text-lg text-white group-hover:text-gray-200"></i>
                   </div>
                 </a>
                 
-                <a href="#" className="group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(220,38,38,0.5)]">
-                    <i className="ri-youtube-line text-2xl text-white"></i>
+                <a href="#" className="social-link group">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-600 to-purple-700 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-y-180 shadow-lg group-hover:shadow-[0_0_25px_rgba(219,39,119,0.6)] preserve-3d">
+                    <i className="ri-instagram-line text-lg text-white group-hover:text-pink-200"></i>
                   </div>
                 </a>
                 
-                <a href="#" className="group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(22,163,74,0.5)]">
-                    <i className="ri-whatsapp-line text-2xl text-white"></i>
-                  </div>
-                </a>
-                
-                <a href="#" className="group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(75,85,99,0.5)]">
-                    <i className="ri-github-line text-2xl text-white"></i>
+                <a href="#" className="social-link group">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:scale-125 group-hover:rotate-y-180 shadow-lg group-hover:shadow-[0_0_25px_rgba(22,163,74,0.6)] preserve-3d">
+                    <i className="ri-mail-line text-lg text-white group-hover:text-green-200"></i>
                   </div>
                 </a>
               </div>
               
-              {/* Copyright */}
-              <div className="text-center mt-12 pt-8 border-t border-gray-800">
-                <p className="text-gray-500">© 2024 ROCKSTAR. All rights reserved. Made in Los Santos.</p>
+              {/* Minimal Copyright */}
+              <div className="text-center mt-8 pt-6 border-t border-gray-800/50">
+                <p className="text-gray-500 text-xs">© 2024 Portfolio. Built with passion.</p>
               </div>
             </div>
           </div>
