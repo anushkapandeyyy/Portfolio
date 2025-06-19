@@ -322,7 +322,7 @@ function App() {
             </div>
           </div>
 
-          {/* Photo Gallery Section */}
+          {/* Achievements Section */}
           <div className="w-full bg-gradient-to-b from-black via-gray-900 to-black py-20 relative overflow-hidden">
             {/* Animated Background Elements */}
             <div className="absolute inset-0 opacity-10">
@@ -333,126 +333,156 @@ function App() {
             
             <div className="container mx-auto px-10 max-w-7xl relative z-10">
               <div className="text-center mb-16">
-                <span className="text-yellow-500 text-lg font-semibold tracking-wider uppercase">MY JOURNEY</span>
+                <span className="text-yellow-500 text-lg font-semibold tracking-wider uppercase">LEGACY</span>
                 <h2 className="text-white text-6xl font-black mt-4 transform hover:scale-105 transition-transform duration-300">
-                  PHOTO GALLERY
+                  ACHIEVEMENTS
                 </h2>
                 <p className="text-gray-300 text-xl mt-6 max-w-2xl mx-auto leading-relaxed">
-                  A visual journey through my professional experiences across different companies
+                  Milestones and accomplishments throughout my criminal career in Los Santos
                 </p>
               </div>
               
-              {/* Gallery Carousel */}
-              <div className="relative">
-                <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide gap-8 pb-8">
-                  
-                  {/* Pratishthan Company */}
-                  <div className="flex-none w-full md:w-2/3 lg:w-1/2 snap-center">
-                    <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)]">
-                      <div className="relative h-80 overflow-hidden">
-                        <img 
-                          src="./girlbg.png" 
-                          alt="My time at Pratishthan"
-                          className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                        <div className="absolute bottom-6 left-6 right-6">
-                          <span className="text-yellow-500 text-sm font-semibold tracking-wider uppercase">2019 - 2021</span>
-                          <h3 className="text-white text-2xl font-black mt-2">MY TIME AT PRATISHTHAN</h3>
-                        </div>
-                      </div>
-                      <div className="p-8">
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
-                          <span className="text-yellow-400 font-semibold text-lg">Software Developer</span>
-                        </div>
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                          Started my journey in the tech world, learning the fundamentals of software development 
-                          and working on innovative projects that shaped my career path.
-                        </p>
-                        <div className="flex flex-wrap gap-3">
-                          <span className="bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-semibold">React</span>
-                          <span className="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">Node.js</span>
-                          <span className="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-semibold">MongoDB</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Zomato Company */}
-                  <div className="flex-none w-full md:w-2/3 lg:w-1/2 snap-center">
-                    <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)]">
-                      <div className="relative h-80 overflow-hidden">
-                        <img 
-                          src="./imag.png" 
-                          alt="My time at Zomato"
-                          className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                        <div className="absolute bottom-6 left-6 right-6">
-                          <span className="text-yellow-500 text-sm font-semibold tracking-wider uppercase">2021 - 2023</span>
-                          <h3 className="text-white text-2xl font-black mt-2">MY TIME AT ZOMATO</h3>
-                        </div>
-                      </div>
-                      <div className="p-8">
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                          <span className="text-red-400 font-semibold text-lg">Senior Developer</span>
-                        </div>
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                          Expanded my expertise in food-tech industry, working on scalable solutions 
-                          and contributing to products used by millions of users daily.
-                        </p>
-                        <div className="flex flex-wrap gap-3">
-                          <span className="bg-red-500/20 text-red-400 px-4 py-2 rounded-full text-sm font-semibold">React Native</span>
-                          <span className="bg-orange-500/20 text-orange-400 px-4 py-2 rounded-full text-sm font-semibold">Python</span>
-                          <span className="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-semibold">Redis</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Current Company */}
-                  <div className="flex-none w-full md:w-2/3 lg:w-1/2 snap-center">
-                    <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)]">
-                      <div className="relative h-80 overflow-hidden">
-                        <img 
-                          src="./bg.png" 
-                          alt="Current Role"
-                          className="w-full h-full object-cover transform hover:scale-110 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                        <div className="absolute bottom-6 left-6 right-6">
-                          <span className="text-yellow-500 text-sm font-semibold tracking-wider uppercase">2023 - PRESENT</span>
-                          <h3 className="text-white text-2xl font-black mt-2">CURRENT ADVENTURES</h3>
-                        </div>
-                      </div>
-                      <div className="p-8">
-                        <div className="flex items-center gap-4 mb-4">
-                          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                          <span className="text-green-400 font-semibold text-lg">Tech Lead</span>
-                        </div>
-                        <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                          Currently leading innovative projects, mentoring teams, and pushing the boundaries 
-                          of what's possible in the digital world.
-                        </p>
-                        <div className="flex flex-wrap gap-3">
-                          <span className="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">TypeScript</span>
-                          <span className="bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold">Next.js</span>
-                          <span className="bg-pink-500/20 text-pink-400 px-4 py-2 rounded-full text-sm font-semibold">GraphQL</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
+              {/* Achievement Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                {/* Navigation Dots */}
-                <div className="flex justify-center gap-3 mt-8">
-                  <div className="w-3 h-3 rounded-full bg-yellow-500 cursor-pointer hover:bg-yellow-400 transition-colors"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 cursor-pointer transition-colors"></div>
-                  <div className="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 cursor-pointer transition-colors"></div>
+                {/* Achievement 1 */}
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)] group">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-yellow-500/30 transition-colors">
+                      <i className="ri-trophy-line text-3xl text-yellow-500"></i>
+                    </div>
+                    <span className="text-yellow-500 text-sm font-semibold tracking-wider uppercase">HEIST MASTER</span>
+                  </div>
+                  <h3 className="text-white text-2xl font-black mb-4 text-center">100+ SUCCESSFUL HEISTS</h3>
+                  <p className="text-gray-300 text-lg text-center leading-relaxed">
+                    Completed over 100 major heists without getting caught, establishing reputation as the most reliable criminal in the city.
+                  </p>
                 </div>
+
+                {/* Achievement 2 */}
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)] group">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-500/30 transition-colors">
+                      <i className="ri-car-line text-3xl text-red-500"></i>
+                    </div>
+                    <span className="text-red-500 text-sm font-semibold tracking-wider uppercase">SPEED DEMON</span>
+                  </div>
+                  <h3 className="text-white text-2xl font-black mb-4 text-center">STREET RACING CHAMPION</h3>
+                  <p className="text-gray-300 text-lg text-center leading-relaxed">
+                    Won the underground racing championship 5 times in a row, dominating the streets of Los Santos with unmatched driving skills.
+                  </p>
+                </div>
+
+                {/* Achievement 3 */}
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)] group">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/30 transition-colors">
+                      <i className="ri-money-dollar-circle-line text-3xl text-green-500"></i>
+                    </div>
+                    <span className="text-green-500 text-sm font-semibold tracking-wider uppercase">BIG SCORE</span>
+                  </div>
+                  <h3 className="text-white text-2xl font-black mb-4 text-center">$50M+ STOLEN</h3>
+                  <p className="text-gray-300 text-lg text-center leading-relaxed">
+                    Accumulated over $50 million through various criminal activities, becoming one of the wealthiest criminals in the underworld.
+                  </p>
+                </div>
+
+                {/* Achievement 4 */}
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)] group">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors">
+                      <i className="ri-skull-line text-3xl text-purple-500"></i>
+                    </div>
+                    <span className="text-purple-500 text-sm font-semibold tracking-wider uppercase">SURVIVOR</span>
+                  </div>
+                  <h3 className="text-white text-2xl font-black mb-4 text-center">ESCAPED DEATH 50 TIMES</h3>
+                  <p className="text-gray-300 text-lg text-center leading-relaxed">
+                    Survived countless shootouts and dangerous situations, proving to be nearly indestructible in the face of danger.
+                  </p>
+                </div>
+
+                {/* Achievement 5 */}
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)] group">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors">
+                      <i className="ri-shield-star-line text-3xl text-blue-500"></i>
+                    </div>
+                    <span className="text-blue-500 text-sm font-semibold tracking-wider uppercase">MASTERMIND</span>
+                  </div>
+                  <h3 className="text-white text-2xl font-black mb-4 text-center">CRIMINAL MASTERMIND</h3>
+                  <p className="text-gray-300 text-lg text-center leading-relaxed">
+                    Planned and executed the most complex criminal operations, outsmarting law enforcement and rival gangs consistently.
+                  </p>
+                </div>
+
+                {/* Achievement 6 */}
+                <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/60 backdrop-blur-xl border border-gray-600/50 rounded-2xl p-8 shadow-2xl transform hover:scale-[1.02] transition-all duration-300 hover:shadow-[0_0_50px_rgba(251,191,36,0.3)] group">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500/30 transition-colors">
+                      <i className="ri-fire-line text-3xl text-orange-500"></i>
+                    </div>
+                    <span className="text-orange-500 text-sm font-semibold tracking-wider uppercase">LEGEND</span>
+                  </div>
+                  <h3 className="text-white text-2xl font-black mb-4 text-center">HALL OF FAME</h3>
+                  <p className="text-gray-300 text-lg text-center leading-relaxed">
+                    Inducted into the criminal hall of fame, recognized as one of the greatest criminals in Los Santos history.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Section with Social Links */}
+          <div className="w-full bg-black py-16 relative">
+            <div className="container mx-auto px-10 max-w-7xl">
+              <div className="text-center mb-12">
+                <h3 className="text-white text-4xl font-black mb-4">CONNECT WITH ME</h3>
+                <p className="text-gray-400 text-lg">Follow my criminal adventures on social media</p>
+              </div>
+              
+              {/* Social Media Links */}
+              <div className="flex justify-center gap-8">
+                <a href="#" className="group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+                    <i className="ri-facebook-fill text-2xl text-white"></i>
+                  </div>
+                </a>
+                
+                <a href="#" className="group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-pink-600 to-purple-700 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(219,39,119,0.5)]">
+                    <i className="ri-instagram-line text-2xl text-white"></i>
+                  </div>
+                </a>
+                
+                <a href="#" className="group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(14,165,233,0.5)]">
+                    <i className="ri-twitter-x-line text-2xl text-white"></i>
+                  </div>
+                </a>
+                
+                <a href="#" className="group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-800 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(220,38,38,0.5)]">
+                    <i className="ri-youtube-line text-2xl text-white"></i>
+                  </div>
+                </a>
+                
+                <a href="#" className="group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-green-800 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(22,163,74,0.5)]">
+                    <i className="ri-whatsapp-line text-2xl text-white"></i>
+                  </div>
+                </a>
+                
+                <a href="#" className="group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-full flex items-center justify-center transform group-hover:scale-110 transition-all duration-300 shadow-lg group-hover:shadow-[0_0_30px_rgba(75,85,99,0.5)]">
+                    <i className="ri-github-line text-2xl text-white"></i>
+                  </div>
+                </a>
+              </div>
+              
+              {/* Copyright */}
+              <div className="text-center mt-12 pt-8 border-t border-gray-800">
+                <p className="text-gray-500">© 2024 ROCKSTAR. All rights reserved. Made in Los Santos.</p>
               </div>
             </div>
           </div>
