@@ -1,0 +1,92 @@
+
+> ytgta@0.0.0 dev
+
+  VITE v6.3.5  ready in 749 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://172.31.128.37:5173/
+  ➜  press h + enter to show help
+5:42:34 PM [vite] (client) Pre-transform error: /home/runner/workspace/src/App.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (811:8)
+
+  809 |
+  810 |           
+> 811 |         </div>
+      |         ^
+  812 |       )}
+  813 |     </>
+  814 |   );
+  Plugin: vite:react-babel
+  File: /home/runner/workspace/src/App.jsx:811:8
+  809|  
+  810|            
+  811|          </div>
+     |          ^
+  812|        )}
+  813|      </>
+5:42:36 PM [vite] Internal server error: /home/runner/workspace/src/App.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (811:8)
+
+  809 |
+  810 |           
+> 811 |         </div>
+      |         ^
+  812 |       )}
+  813 |     </>
+  814 |   );
+  Plugin: vite:react-babel
+  File: /home/runner/workspace/src/App.jsx:811:8
+  809|  
+  810|            
+  811|          </div>
+     |          ^
+  812|        )}
+  813|      </>
+      at constructor (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:19082)
+      at JSXParserMixin.raise (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:178064)
+      at JSXParserMixin.jsxParseElementAt (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:138314)
+      at JSXParserMixin.jsxParseElement (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:138564)
+      at JSXParserMixin.parseExprAtom (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:138747)
+      at JSXParserMixin.parseExprSubscripts (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:300709)
+      at JSXParserMixin.parseUpdate (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:300190)
+      at JSXParserMixin.parseMaybeUnary (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:299571)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:295445)
+      at JSXParserMixin.parseExprOps (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:295619)
+      at JSXParserMixin.parseMaybeConditional (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:294891)
+      at JSXParserMixin.parseMaybeAssign (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:293373)
+      at /home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:292645
+      at JSXParserMixin.allowInAnd (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:335863)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:292625)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:316368)
+      at JSXParserMixin.parseExprAtom (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:307280)
+      at JSXParserMixin.parseExprAtom (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:138906)
+      at JSXParserMixin.parseExprSubscripts (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:300709)
+      at JSXParserMixin.parseUpdate (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:300190)
+      at JSXParserMixin.parseMaybeUnary (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:299571)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:295445)
+      at JSXParserMixin.parseExprOpBaseRightExpr (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:297982)
+      at JSXParserMixin.parseExprOpRightExpr (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:297848)
+      at JSXParserMixin.parseExprOp (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:296806)
+      at JSXParserMixin.parseExprOps (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:295743)
+      at JSXParserMixin.parseMaybeConditional (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:294891)
+      at JSXParserMixin.parseMaybeAssign (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:293373)
+      at JSXParserMixin.parseExpressionBase (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:292090)
+      at /home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:291955
+      at JSXParserMixin.allowInAnd (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:335863)
+      at JSXParserMixin.parseExpression (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:291935)
+      at JSXParserMixin.jsxParseExpressionContainer (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:135341)
+      at JSXParserMixin.jsxParseElementAt (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:137387)
+      at JSXParserMixin.jsxParseElement (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:138564)
+      at JSXParserMixin.parseExprAtom (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:138747)
+      at JSXParserMixin.parseExprSubscripts (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:300709)
+      at JSXParserMixin.parseUpdate (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:300190)
+      at JSXParserMixin.parseMaybeUnary (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:299571)
+      at JSXParserMixin.parseMaybeUnaryOrPrivate (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:295445)
+      at JSXParserMixin.parseExprOps (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:295619)
+      at JSXParserMixin.parseMaybeConditional (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:294891)
+      at JSXParserMixin.parseMaybeAssign (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:293373)
+      at /home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:292645
+      at JSXParserMixin.allowInAnd (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:335863)
+      at JSXParserMixin.parseMaybeAssignAllowIn (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:292625)
+      at JSXParserMixin.parseParenAndDistinguishExpression (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:316368)
+      at JSXParserMixin.parseExprAtom (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:307280)
+      at JSXParserMixin.parseExprAtom (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:138906)
+      at JSXParserMixin.parseExprSubscripts (/home/runner/workspace/node_modules/@babel/parser/lib/index.js:1:300709)
