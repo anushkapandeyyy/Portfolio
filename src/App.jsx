@@ -125,15 +125,15 @@ function App() {
       {showContent && (
         <div className="main w-full rotate-[-10deg] scale-[1.7]">
           <div className="landing overflow-hidden relative w-full h-screen bg-black">
-            <div className="navbar absolute top-0 left-0 z-[10] w-full py-10 px-10">
-              <div className="logo flex gap-7">
-                <div className="lines flex flex-col gap-[5px]">
-                  <div className="line w-15 h-2 bg-white"></div>
-                  <div className="line w-8 h-2 bg-white"></div>
-                  <div className="line w-5 h-2 bg-white"></div>
+            <div className="navbar absolute top-0 left-0 z-[10] w-full py-8 px-10">
+              <div className="logo flex gap-6 items-center">
+                <div className="lines flex flex-col gap-[3px]">
+                  <div className="line w-12 h-1 bg-yellow-500 rounded"></div>
+                  <div className="line w-8 h-1 bg-yellow-500 rounded"></div>
+                  <div className="line w-6 h-1 bg-yellow-500 rounded"></div>
                 </div>
-                <h3 className="text-4xl -mt-[8px] leading-none text-white">
-                  Rockstar
+                <h3 className="text-3xl font-bold leading-none text-white tracking-wider">
+                  ROCKSTAR
                 </h3>
               </div>
             </div>
@@ -149,10 +149,13 @@ function App() {
                 src="./bg.png"
                 alt=""
               />
-              <div className="text text-white flex flex-col gap-3 absolute top-20 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
-                <h1 className="text-[12rem] leading-none -ml-40">grand</h1>
-                <h1 className="text-[12rem] leading-none ml-20">theft</h1>
-                <h1 className="text-[12rem] leading-none -ml-40">auto</h1>
+              <div className="text text-white flex flex-col gap-2 absolute top-16 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
+                <h1 className="text-[10rem] leading-[0.8] -ml-32 font-black tracking-tighter">GRAND</h1>
+                <h1 className="text-[10rem] leading-[0.8] ml-16 font-black tracking-tighter">THEFT</h1>
+                <h1 className="text-[10rem] leading-[0.8] -ml-32 font-black tracking-tighter">AUTO</h1>
+                <div className="mt-4 ml-16">
+                  <span className="text-2xl bg-yellow-500 text-black px-4 py-2 font-bold tracking-wider">V</span>
+                </div>
               </div>
               <img
                 className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2  scale-[3] rotate-[-20deg]"
@@ -160,65 +163,74 @@ function App() {
                 alt=""
               />
             </div>
-            <div className="btmbar text-white absolute bottom-0 left-0 w-full py-15 px-10 bg-gradient-to-t from-black to-transparent">
-              <div className="flex gap-4 items-center">
-                <i className="text-4xl ri-arrow-down-line"></i>
-                <h3 className="text-xl font-[Helvetica_Now_Display]">
-                  Scroll Down
-                </h3>
+            <div className="btmbar text-white absolute bottom-0 left-0 w-full py-12 px-10 bg-gradient-to-t from-black via-black/80 to-transparent">
+              <div className="flex justify-between items-center">
+                <div className="flex gap-4 items-center">
+                  <div className="animate-bounce">
+                    <i className="text-3xl ri-arrow-down-line text-yellow-500"></i>
+                  </div>
+                  <h3 className="text-lg font-semibold tracking-wider">
+                    SCROLL TO EXPLORE
+                  </h3>
+                </div>
+                <div className="flex items-center gap-4">
+                  <span className="text-sm text-gray-400">AVAILABLE ON</span>
+                  <img
+                    className="h-8 opacity-80 hover:opacity-100 transition-opacity"
+                    src="./ps5.png"
+                    alt="PlayStation 5"
+                  />
+                </div>
               </div>
-              <img
-                className="absolute h-[55px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                src="./ps5.png"
-                alt=""
-              />
             </div>
           </div>
-          <div className="w-full h-screen flex items-center justify-center bg-black">
-            <div className="cntnr flex text-white w-full h-[80%] ">
-              <div className="limg relative w-1/2 h-full">
+          <div className="w-full min-h-screen flex items-center justify-center bg-gradient-to-b from-black to-gray-900 py-20">
+            <div className="cntnr flex text-white w-full max-w-7xl mx-auto px-10 items-center gap-16">
+              <div className="limg relative w-1/2 h-[600px]">
                 <img
-                  className="absolute scale-[1.3] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  className="absolute scale-[1.2] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-2xl"
                   src="./imag.png"
-                  alt=""
+                  alt="Character"
                 />
               </div>
-              <div className="rg w-[30%] py-30">
-                <h1 className="text-8xl">Still Running,</h1>
-                <h1 className="text-8xl">Not Hunting</h1>
-                <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Distinctio possimus, asperiores nam, omnis inventore nesciunt
-                  a architecto eveniet saepe, ducimus necessitatibus at
-                  voluptate.
+              <div className="rg w-1/2">
+                <div className="mb-6">
+                  <span className="text-yellow-500 text-lg font-semibold tracking-wider">WELCOME TO LOS SANTOS</span>
+                </div>
+                <h1 className="text-7xl font-black leading-tight mb-8">
+                  <span className="block">STILL RUNNING,</span>
+                  <span className="block text-yellow-500">NOT HUNTING</span>
+                </h1>
+                <p className="text-xl text-gray-300 leading-relaxed mb-6">
+                  Experience the most ambitious and expansive Grand Theft Auto yet. 
+                  Set within the fictional state of San Andreas, based on Southern California.
                 </p>
-                <p className="mt-3 text-xl font-[Helvetica_Now_Display]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  eius illum fugit eligendi nesciunt quia similique velit
-                  excepturi soluta tenetur illo repellat consectetur laborum
-                  eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
-                  autem sapiente.
+                <p className="text-lg text-gray-400 leading-relaxed mb-8">
+                  Follow three unique protagonists whose stories interconnect and interweave 
+                  throughout the game's narrative. Switch between characters at will and 
+                  experience their individual storylines.
                 </p>
-                <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At
-                  eius illum fugit eligendi nesciunt quia similique velit
-                  excepturi soluta tenetur illo repellat consectetur laborum
-                  eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
-                  autem sapiente.
-                </p>
-                <button className="bg-yellow-500 px-10 py-10 text-black mt-10 text-4xl">
-                  Download Now
-                </button>
+                <div className="flex gap-6">
+                  <button className="bg-yellow-500 hover:bg-yellow-400 transition-colors px-8 py-4 text-black font-bold text-xl tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform">
+                    PLAY NOW
+                  </button>
+                  <button className="border-2 border-white hover:bg-white hover:text-black transition-colors px-8 py-4 text-white font-bold text-xl tracking-wider">
+                    WATCH TRAILER
+                  </button>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Experience Section */}
-          <div className="w-full min-h-screen bg-gradient-to-b from-black to-gray-900 py-20">
-            <div className="container mx-auto px-10 max-w-4xl">
-              <h2 className="text-white text-9xl font-bold text-center mb-20">
-                Experience
-              </h2>
+          <div className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-black py-20">
+            <div className="container mx-auto px-10 max-w-6xl">
+              <div className="text-center mb-20">
+                <span className="text-yellow-500 text-lg font-semibold tracking-wider">CAREER PATH</span>
+                <h2 className="text-white text-8xl font-black mt-4">
+                  EXPERIENCE
+                </h2>
+              </div>
               
               <div className="relative">
                 {/* Vertical Line */}
@@ -286,11 +298,14 @@ function App() {
           </div>
 
           {/* Skills Section */}
-          <div className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-black py-20">
+          <div className="w-full min-h-screen bg-black py-20">
             <div className="container mx-auto px-10">
-              <h2 className="text-white text-9xl font-bold text-center mb-20">
-                Skills
-              </h2>
+              <div className="text-center mb-20">
+                <span className="text-yellow-500 text-lg font-semibold tracking-wider">CHARACTER STATS</span>
+                <h2 className="text-white text-8xl font-black mt-4">
+                  SKILLS
+                </h2>
+              </div>
               <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                   <div className="space-y-8">
