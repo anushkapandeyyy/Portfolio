@@ -261,34 +261,35 @@ body {
   transition: clip-path 0.1s ease-out;
 }
 
-.divider-line {
-  transition: left 0.1s ease-out;
-}
-
 .cursor-indicator {
   transition: left 0.1s ease-out, opacity 0.3s ease;
 }
 
-/* Custom cursor for image reveal */
-.image-reveal-container::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background: rgba(251, 191, 36, 0.8);
-  border: 2px solid rgba(251, 191, 36, 1);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  z-index: 30;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* Custom animations for cursor */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.image-reveal-container:hover::before {
-  opacity: 1;
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+@keyframes bounce-x {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+}
+
+.animate-bounce-x {
+  animation: bounce-x 1s ease-in-out infinite;
 }
 
 /* Responsive adjustments */
