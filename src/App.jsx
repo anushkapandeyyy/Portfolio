@@ -212,6 +212,219 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Experience Section */}
+          <div className="w-full min-h-screen bg-gradient-to-b from-black to-gray-900 py-20">
+            <div className="container mx-auto px-10">
+              <h2 className="text-white text-9xl font-bold text-center mb-20">
+                Experience
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-yellow-500 text-6xl mb-4">
+                    <i className="ri-car-line"></i>
+                  </div>
+                  <h3 className="text-white text-3xl font-bold mb-4">Street Racing</h3>
+                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
+                    Master the art of high-speed racing through the streets of Los Santos. 
+                    Experience adrenaline-pumping races with custom vehicles and nitrous boosts.
+                  </p>
+                  <div className="text-yellow-500 mt-4 text-xl">★★★★★</div>
+                </div>
+
+                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-yellow-500 text-6xl mb-4">
+                    <i className="ri-gun-line"></i>
+                  </div>
+                  <h3 className="text-white text-3xl font-bold mb-4">Combat Missions</h3>
+                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
+                    Engage in intense firefights and tactical operations. 
+                    Complete heists, shootouts, and covert missions across the city.
+                  </p>
+                  <div className="text-yellow-500 mt-4 text-xl">★★★★☆</div>
+                </div>
+
+                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-yellow-500 text-6xl mb-4">
+                    <i className="ri-building-line"></i>
+                  </div>
+                  <h3 className="text-white text-3xl font-bold mb-4">City Exploration</h3>
+                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
+                    Explore every corner of the massive open world. 
+                    Discover hidden secrets, collectibles, and unique locations.
+                  </p>
+                  <div className="text-yellow-500 mt-4 text-xl">★★★★★</div>
+                </div>
+
+                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-yellow-500 text-6xl mb-4">
+                    <i className="ri-money-dollar-circle-line"></i>
+                  </div>
+                  <h3 className="text-white text-3xl font-bold mb-4">Heist Planning</h3>
+                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
+                    Plan and execute elaborate heists with your crew. 
+                    Strategic thinking and teamwork are essential for success.
+                  </p>
+                  <div className="text-yellow-500 mt-4 text-xl">★★★★★</div>
+                </div>
+
+                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-yellow-500 text-6xl mb-4">
+                    <i className="ri-plane-line"></i>
+                  </div>
+                  <h3 className="text-white text-3xl font-bold mb-4">Aviation</h3>
+                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
+                    Take to the skies with helicopters, jets, and planes. 
+                    Master aerial combat and precision flying missions.
+                  </p>
+                  <div className="text-yellow-500 mt-4 text-xl">★★★☆☆</div>
+                </div>
+
+                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
+                  <div className="text-yellow-500 text-6xl mb-4">
+                    <i className="ri-team-line"></i>
+                  </div>
+                  <h3 className="text-white text-3xl font-bold mb-4">Gang Operations</h3>
+                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
+                    Build your criminal empire and manage gang territories. 
+                    Recruit members and expand your influence across the city.
+                  </p>
+                  <div className="text-yellow-500 mt-4 text-xl">★★★★☆</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Skills Section */}
+          <div className="w-full min-h-screen bg-gradient-to-b from-gray-900 to-black py-20">
+            <div className="container mx-auto px-10">
+              <h2 className="text-white text-9xl font-bold text-center mb-20">
+                Skills
+              </h2>
+              <div className="max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                  <div className="space-y-8">
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Driving</span>
+                        <span className="text-yellow-500 text-xl">95%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '95%'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Shooting</span>
+                        <span className="text-yellow-500 text-xl">88%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '88%'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Stealth</span>
+                        <span className="text-yellow-500 text-xl">72%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '72%'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Flying</span>
+                        <span className="text-yellow-500 text-xl">65%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '65%'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Stamina</span>
+                        <span className="text-yellow-500 text-xl">80%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '80%'}}></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-8">
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Strength</span>
+                        <span className="text-yellow-500 text-xl">85%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '85%'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Lung Capacity</span>
+                        <span className="text-yellow-500 text-xl">78%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '78%'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Special Ability</span>
+                        <span className="text-yellow-500 text-xl">92%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '92%'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Mental State</span>
+                        <span className="text-yellow-500 text-xl">68%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '68%'}}></div>
+                      </div>
+                    </div>
+
+                    <div className="skill-item">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white text-2xl font-bold">Criminal Record</span>
+                        <span className="text-yellow-500 text-xl">100%</span>
+                      </div>
+                      <div className="w-full bg-gray-800 rounded-full h-4">
+                        <div className="bg-yellow-500 h-4 rounded-full" style={{width: '100%'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-16 text-center">
+                  <h3 className="text-white text-4xl font-bold mb-8">Special Abilities</h3>
+                  <div className="flex justify-center gap-8 flex-wrap">
+                    <div className="bg-black border-2 border-yellow-500 px-8 py-4 text-yellow-500 text-xl font-bold">
+                      BULLET TIME
+                    </div>
+                    <div className="bg-black border-2 border-yellow-500 px-8 py-4 text-yellow-500 text-xl font-bold">
+                      RAGE MODE
+                    </div>
+                    <div className="bg-black border-2 border-yellow-500 px-8 py-4 text-yellow-500 text-xl font-bold">
+                      FOCUS MODE
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       )}
     </>
