@@ -754,7 +754,7 @@ function App() {
           </div>
 
           {/* Footer Section with Social Links */}
-          <div className="w-full bg-black py-16 relative"></div>
+          <div className="w-full bg-black py-16 relative">
             <div className="container mx-auto px-10 max-w-7xl">
               <div className="text-center mb-12">
                 <h3 className="text-white text-4xl font-black mb-4">CONNECT WITH ME</h3>
