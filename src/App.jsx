@@ -215,81 +215,71 @@ function App() {
 
           {/* Experience Section */}
           <div className="w-full min-h-screen bg-gradient-to-b from-black to-gray-900 py-20">
-            <div className="container mx-auto px-10">
+            <div className="container mx-auto px-10 max-w-4xl">
               <h2 className="text-white text-9xl font-bold text-center mb-20">
                 Experience
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-yellow-500 text-6xl mb-4">
-                    <i className="ri-car-line"></i>
+              
+              <div className="relative">
+                {/* Vertical Line */}
+                <div className="absolute left-8 top-0 bottom-0 w-1 bg-yellow-500"></div>
+                
+                {/* Timeline Items */}
+                <div className="space-y-12">
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                    <div className="text-white">
+                      <h3 className="text-3xl font-bold mb-2">Worked in Los Santos Police Department</h3>
+                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                        Started as a rookie cop, learned the ins and outs of the criminal underworld. 
+                        Gained valuable skills in investigation and law enforcement tactics.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-white text-3xl font-bold mb-4">Street Racing</h3>
-                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
-                    Master the art of high-speed racing through the streets of Los Santos. 
-                    Experience adrenaline-pumping races with custom vehicles and nitrous boosts.
-                  </p>
-                  <div className="text-yellow-500 mt-4 text-xl">★★★★★</div>
-                </div>
 
-                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-yellow-500 text-6xl mb-4">
-                    <i className="ri-gun-line"></i>
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                    <div className="text-white">
+                      <h3 className="text-3xl font-bold mb-2">Worked in Underground Racing Circuit</h3>
+                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                        Mastered high-speed driving and vehicle customization. 
+                        Built reputation as one of the fastest drivers in the city.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-white text-3xl font-bold mb-4">Combat Missions</h3>
-                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
-                    Engage in intense firefights and tactical operations. 
-                    Complete heists, shootouts, and covert missions across the city.
-                  </p>
-                  <div className="text-yellow-500 mt-4 text-xl">★★★★☆</div>
-                </div>
 
-                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-yellow-500 text-6xl mb-4">
-                    <i className="ri-building-line"></i>
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                    <div className="text-white">
+                      <h3 className="text-3xl font-bold mb-2">Worked in Private Security Firm</h3>
+                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                        Specialized in VIP protection and tactical operations. 
+                        Developed advanced combat skills and strategic planning abilities.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-white text-3xl font-bold mb-4">City Exploration</h3>
-                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
-                    Explore every corner of the massive open world. 
-                    Discover hidden secrets, collectibles, and unique locations.
-                  </p>
-                  <div className="text-yellow-500 mt-4 text-xl">★★★★★</div>
-                </div>
 
-                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-yellow-500 text-6xl mb-4">
-                    <i className="ri-money-dollar-circle-line"></i>
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                    <div className="text-white">
+                      <h3 className="text-3xl font-bold mb-2">Worked in Criminal Organization</h3>
+                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                        Rose through the ranks of the criminal underworld. 
+                        Planned and executed major heists and operations across the city.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-white text-3xl font-bold mb-4">Heist Planning</h3>
-                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
-                    Plan and execute elaborate heists with your crew. 
-                    Strategic thinking and teamwork are essential for success.
-                  </p>
-                  <div className="text-yellow-500 mt-4 text-xl">★★★★★</div>
-                </div>
 
-                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-yellow-500 text-6xl mb-4">
-                    <i className="ri-plane-line"></i>
+                  <div className="flex items-start">
+                    <div className="w-6 h-6 bg-yellow-500 rounded-full relative z-10 mr-8"></div>
+                    <div className="text-white">
+                      <h3 className="text-3xl font-bold mb-2">Worked as Independent Contractor</h3>
+                      <p className="text-xl text-gray-300 font-[Helvetica_Now_Display]">
+                        Now operating as a freelance criminal for hire. 
+                        Taking on the most dangerous and lucrative jobs in Los Santos.
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-white text-3xl font-bold mb-4">Aviation</h3>
-                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
-                    Take to the skies with helicopters, jets, and planes. 
-                    Master aerial combat and precision flying missions.
-                  </p>
-                  <div className="text-yellow-500 mt-4 text-xl">★★★☆☆</div>
-                </div>
-
-                <div className="bg-black border-2 border-yellow-500 p-8 transform hover:scale-105 transition-transform duration-300">
-                  <div className="text-yellow-500 text-6xl mb-4">
-                    <i className="ri-team-line"></i>
-                  </div>
-                  <h3 className="text-white text-3xl font-bold mb-4">Gang Operations</h3>
-                  <p className="text-gray-300 text-lg font-[Helvetica_Now_Display]">
-                    Build your criminal empire and manage gang territories. 
-                    Recruit members and expand your influence across the city.
-                  </p>
-                  <div className="text-yellow-500 mt-4 text-xl">★★★★☆</div>
                 </div>
               </div>
             </div>
