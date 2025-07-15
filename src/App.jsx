@@ -61,9 +61,9 @@ function App() {
     });
 
     gsap.to(".character", {
-      scale: 1.4,
+      scale: 0.4,
       x: "-50%",
-      bottom: "-25%",
+      bottom: "-60%",
       rotate: 0,
       duration: 2,
       delay: "-.8",
@@ -102,7 +102,7 @@ function App() {
       const rect = achievementsSection.getBoundingClientRect();
       const mouseX = ((e.clientX - rect.left) / rect.width) * 100;
       const mouseY = ((e.clientY - rect.top) / rect.height) * 100;
-      
+
       // Update CSS variables for dynamic background
       achievementsSection.style.setProperty('--mouse-x', `${mouseX}%`);
       achievementsSection.style.setProperty('--mouse-y', `${mouseY}%`);
@@ -112,10 +112,10 @@ function App() {
         const cardRect = card.getBoundingClientRect();
         const cardCenterX = cardRect.left + cardRect.width / 2;
         const cardCenterY = cardRect.top + cardRect.height / 2;
-        
+
         const angleX = (e.clientY - cardCenterY) / 15;
         const angleY = (e.clientX - cardCenterX) / 15;
-        
+
         gsap.to(card, {
           rotateX: -angleX,
           rotateY: angleY,
@@ -129,7 +129,7 @@ function App() {
         particles.forEach((particle, pIndex) => {
           const moveX = (angleY * (pIndex + 1)) / 5;
           const moveY = (angleX * (pIndex + 1)) / 5;
-          
+
           gsap.to(particle, {
             x: moveX,
             y: moveY,
@@ -144,7 +144,7 @@ function App() {
         const intensity = (index + 1) * 0.3;
         const moveX = (mouseX - 50) * intensity;
         const moveY = (mouseY - 50) * intensity;
-        
+
         gsap.to(orb, {
           x: moveX,
           y: moveY,
@@ -186,7 +186,7 @@ function App() {
     });
 
     // Crazy entrance animations for achievement cards
-    gsap.fromTo(".achievement-card", 
+    gsap.fromTo(".achievement-card",
       {
         y: 100,
         opacity: 0,
@@ -231,22 +231,22 @@ function App() {
     const cursorIndicator = document.querySelector('.cursor-indicator');
 
     if (imageRevealContainer && revealImage && cursorIndicator) {
-      imageRevealContainer.addEventListener('mousemove', function(e) {
+      imageRevealContainer.addEventListener('mousemove', function (e) {
         const rect = imageRevealContainer.getBoundingClientRect();
         const mouseX = e.clientX - rect.left;
         const containerWidth = rect.width;
         const percentage = (mouseX / containerWidth) * 100;
-        
+
         // Clamp percentage between 0 and 100
         const clampedPercentage = Math.max(0, Math.min(100, percentage));
-        
+
         // Update clip-path for reveal effect
         revealImage.style.clipPath = `inset(0 ${100 - clampedPercentage}% 0 0)`;
-        
+
         // Update cursor indicator position
         cursorIndicator.style.left = `${clampedPercentage}%`;
         cursorIndicator.style.opacity = '1';
-        
+
         // Add subtle tilt effect based on mouse position
         const tilt = (clampedPercentage - 50) / 10;
         gsap.to(imageRevealContainer, {
@@ -255,8 +255,8 @@ function App() {
           ease: "power2.out"
         });
       });
-      
-      imageRevealContainer.addEventListener('mouseenter', function() {
+
+      imageRevealContainer.addEventListener('mouseenter', function () {
         cursorIndicator.style.opacity = '1';
         gsap.to(imageRevealContainer, {
           scale: 1.02,
@@ -264,13 +264,13 @@ function App() {
           ease: "power2.out"
         });
       });
-      
-      imageRevealContainer.addEventListener('mouseleave', function() {
+
+      imageRevealContainer.addEventListener('mouseleave', function () {
         // Reset to center position
         revealImage.style.clipPath = 'inset(0 50% 0 0)';
         cursorIndicator.style.left = '50%';
         cursorIndicator.style.opacity = '0';
-        
+
         gsap.to(imageRevealContainer, {
           rotateY: 0,
           scale: 1,
@@ -299,7 +299,7 @@ function App() {
                   dominantBaseline="middle"
                   fontFamily="Arial Black"
                 >
-                  VI
+                  AP
                 </text>
               </g>
             </mask>
@@ -324,7 +324,7 @@ function App() {
                   <div className="line w-6 h-1 bg-purple-400 rounded"></div>
                 </div>
                 <h3 className="text-3xl font-bold leading-none text-white tracking-wider">
-                  ROCKSTAR
+                  PORTFOLIO
                 </h3>
               </div>
             </div>
@@ -341,16 +341,14 @@ function App() {
                 alt=""
               />
               <div className="text text-white flex flex-col gap-2 absolute top-16 left-1/2 -translate-x-1/2 scale-[1.4] rotate-[-10deg]">
-                <h1 className="text-[10rem] leading-[0.8] -ml-32 font-black tracking-tighter">GRAND</h1>
-                <h1 className="text-[10rem] leading-[0.8] ml-16 font-black tracking-tighter">THEFT</h1>
-                <h1 className="text-[10rem] leading-[0.8] -ml-32 font-black tracking-tighter">AUTO</h1>
-                <div className="mt-4 ml-16">
-                  <span className="text-2xl bg-purple-400 text-black px-4 py-2 font-bold tracking-wider">V</span>
-                </div>
+                <h1 className="text-[10rem] leading-[0.8] -ml-32 font-black tracking-tighter">Anushka</h1>
+                <h1 className="text-[10rem] leading-[0.8] ml-16 font-black tracking-tighter">Pandey</h1>
+                <h1 className="text-[10rem] leading-[0.8] -ml-32 font-black tracking-tighter"></h1>
+             
               </div>
               <img
-                className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2  scale-[3] rotate-[-20deg]"
-                src="./girlbg.png"
+                className="absolute character -bottom-[150%] left-1/2 -translate-x-1/2  scale-[1] rotate-[-20deg]"
+                src="./image2.png"
                 alt=""
               />
             </div>
@@ -380,35 +378,23 @@ function App() {
               <div className="limg relative w-1/2 h-[600px]">
                 <img
                   className="absolute scale-[1.2] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 drop-shadow-2xl"
-                  src="./imag.png"
+                  src="./image1.png"
                   alt="Character"
                 />
               </div>
               <div className="rg w-1/2">
                 <div className="mb-6">
-                  <span className="text-purple-400 text-lg font-semibold tracking-wider">WELCOME TO LOS SANTOS</span>
+                  <span className="text-purple-400 text-lg font-semibold tracking-wider">Building & Delivering: My Experience</span>
                 </div>
-                <h1 className="text-7xl font-black leading-tight mb-8">
-                  <span className="block">STILL RUNNING,</span>
-                  <span className="block text-purple-400">NOT HUNTING</span>
-                </h1>
                 <p className="text-xl text-gray-300 leading-relaxed mb-6">
-                  Experience the most ambitious and expansive Grand Theft Auto yet. 
+                  Experience the most ambitious and expansive Grand Theft Auto yet.
                   Set within the fictional state of San Andreas, based on Southern California.
                 </p>
                 <p className="text-lg text-gray-400 leading-relaxed mb-8">
-                  Follow three unique protagonists whose stories interconnect and interweave 
-                  throughout the game's narrative. Switch between characters at will and 
+                  Follow three unique protagonists whose stories interconnect and interweave
+                  throughout the game's narrative. Switch between characters at will and
                   experience their individual storylines.
                 </p>
-                <div className="flex gap-6">
-                  <button className="bg-purple-400 hover:bg-purple-300 transition-colors px-8 py-4 text-black font-bold text-xl tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-transform">
-                    PLAY NOW
-                  </button>
-                  <button className="border-2 border-white hover:bg-white hover:text-black transition-colors px-8 py-4 text-white font-bold text-xl tracking-wider">
-                    WATCH TRAILER
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -418,10 +404,10 @@ function App() {
             {/* 3D Background Effects */}
             <div className="absolute inset-0 opacity-20">
               <div className="absolute top-20 left-10 w-32 h-32 bg-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute bottom-40 right-20 w-48 h-48 bg-gray-500/10 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
-              <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-purple-300/10 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+              <div className="absolute bottom-40 right-20 w-48 h-48 bg-gray-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-purple-300/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
             </div>
-            
+
             <div className="container mx-auto px-10 max-w-7xl relative z-10">
               <div className="text-center mb-20">
                 <span className="text-purple-400 text-lg font-semibold tracking-wider">CAREER PATH</span>
@@ -429,20 +415,20 @@ function App() {
                   EXPERIENCE
                 </h2>
               </div>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 {/* Left side - Character Image with 3D effects */}
                 <div className="relative h-[600px] flex items-center justify-center perspective-1000">
                   <div className="relative transform-gpu hover:rotate-y-12 transition-transform duration-700 preserve-3d">
                     <img
                       className="scale-[1.2] drop-shadow-2xl hover:drop-shadow-[0_0_30px_rgba(192,132,252,0.5)] transition-all duration-500"
-                      src="./girlbg.png"
+                      src="./image2.png"
                       alt="Character"
                     />
                     {/* 3D Floating particles */}
                     <div className="absolute -top-10 -left-10 w-4 h-4 bg-purple-400 rounded-full animate-bounce opacity-70"></div>
-                    <div className="absolute -bottom-5 -right-5 w-3 h-3 bg-purple-300 rounded-full animate-bounce opacity-60" style={{animationDelay: '0.5s'}}></div>
-                    <div className="absolute top-1/4 -right-8 w-2 h-2 bg-purple-200 rounded-full animate-bounce opacity-50" style={{animationDelay: '1s'}}></div>
+                    <div className="absolute -bottom-5 -right-5 w-3 h-3 bg-purple-300 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.5s' }}></div>
+                    <div className="absolute top-1/4 -right-8 w-2 h-2 bg-purple-200 rounded-full animate-bounce opacity-50" style={{ animationDelay: '1s' }}></div>
                   </div>
                 </div>
 
@@ -450,70 +436,91 @@ function App() {
                 <div className="relative">
                   {/* Vertical Line with glow */}
                   <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-400 via-purple-300 to-purple-400 shadow-[0_0_20px_rgba(192,132,252,0.6)]"></div>
-                  
+
                   {/* Timeline Items */}
-                  <div className="space-y-12">
+                  <div className="space-y-12" style={{fontFamily: 'Poppins, sans-serif'}}>
                     <div className="flex items-start group">
                       <div className="w-6 h-6 bg-purple-400 rounded-full relative z-10 mr-8 shadow-[0_0_20px_rgba(192,132,252,0.8)] group-hover:scale-125 transition-transform duration-300 animate-pulse"></div>
                       <div className="text-white transform group-hover:translate-x-2 transition-transform duration-300 bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-yellow-500/50 transition-colors">
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">Worked in Los Santos Police Department</h3>
-                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                          Started as a rookie cop, learned the ins and outs of the criminal underworld. 
-                          Gained valuable skills in investigation and law enforcement tactics.
-                        </p>
+                        <div className="mb-6">
+                          <h3 className="text-xl font-semibold text-white">Pratishthan Software Ventures</h3>
+                          <p className="text-lg text-gray-300">Software Engineer</p>
+                          <p className="text-sm text-gray-400 mb-2">Jan 2023 – Present</p>
+                          <ul className="list-disc list-inside text-gray-300 space-y-2">
+                            <li>
+                              Contributed to the development of a Buy Now, Pay Later (BNPL) service for Emirates National Bank of Dubai,
+                              supporting 20M+ customers with short-term loan processing.
+                            </li>
+                            <li>
+                              Implemented Kafka consumers to handle real-time billing, triggered by customer payments and due amount updates.
+                            </li>
+                            <li>
+                              Introduced a business reconciliation microservice to validate multi-step business process workflow across
+                              microservices, ensuring transactional integrity.
+                            </li>
+                            <li>
+                              Reduced data access latency by 30% by designing and implementing a shared query library that dynamically builds
+                              and executes optimized SQL queries across multiple microservices.
+                            </li>
+                            <li>
+                              Led the development of a rejection management system to track failed transactions, enabling manual re-triggering
+                              and ensuring data consistency.
+                            </li>
+                            <li>
+                              <strong>Tech Stack:</strong> Java, Spring Boot, Spring MVC, SQL, Kafka
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="flex items-start group">
-                      <div className="w-6 h-6 bg-purple-400 rounded-full relative z-10 mr-8 shadow-[0_0_20px_rgba(192,132,252,0.8)] group-hover:scale-125 transition-transform duration-300 animate-pulse" style={{animationDelay: '0.2s'}}></div>
-                      <div className="text-white transform group-hover:translate-x-2 transition-transform duration-300 bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-purple-400/50 transition-colors">
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">Worked in Underground Racing Circuit</h3>
-                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                          Mastered high-speed driving and vehicle customization. 
-                          Built reputation as one of the fastest drivers in the city.
-                        </p>
+                    <div className="flex items-start group font-poppins">
+                      <div
+                        className="w-6 h-6 bg-purple-400 rounded-full relative z-10 mr-8 shadow-[0_0_20px_rgba(192,132,252,0.8)] group-hover:scale-125 transition-transform duration-300 animate-pulse"
+                        style={{ animationDelay: '0.2s' }}
+                      ></div>
+
+                      <div className="text-white transform group-hover:translate-x-2 transition-transform duration-300 bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-yellow-500/50 transition-colors">
+                        <div className="mb-6">
+                          <h3 className="text-xl font-semibold text-white">Zomato Ltd</h3>
+                          <p className="text-lg text-gray-300">Software Engineer Intern</p>
+                          <p className="text-sm text-gray-400 mb-2">Jan 2023 – June 2023 · Gurgaon, India</p>
+                          <ul className="list-disc list-inside text-gray-300 space-y-2">
+                            <li>
+                              Worked with Logistics team, handling over 3,50,000 active riders, processing 1.3 million orders per day.
+                            </li>
+                            <li>
+                              Implemented RESTful APIs for CRUD operations, optimizing query design for efficient data access.
+                            </li>
+                            <li>
+                              Contributed to the FleetCoach app, improving rider and coach management efficiency by 40%.
+                            </li>
+                            <li>
+                              Enabled real-time tracking of fleet coaches during live meetings using Kafka event streaming.
+                            </li>
+                            <li>
+                              Enhanced dashboard with rider–coach ID search functionality.
+                            </li>
+                            <li>
+                              Built targeted meeting notifications, reducing irrelevant alerts to non-participants.
+                            </li>
+                            <li>
+                              <strong>Tech Stack:</strong> Golang, SQL, Kafka
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="flex items-start group">
-                      <div className="w-6 h-6 bg-purple-400 rounded-full relative z-10 mr-8 shadow-[0_0_20px_rgba(192,132,252,0.8)] group-hover:scale-125 transition-transform duration-300 animate-pulse" style={{animationDelay: '0.4s'}}></div>
-                      <div className="text-white transform group-hover:translate-x-2 transition-transform duration-300 bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-purple-400/50 transition-colors">
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">Worked in Private Security Firm</h3>
-                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                          Specialized in VIP protection and tactical operations. 
-                          Developed advanced combat skills and strategic planning abilities.
-                        </p>
-                      </div>
-                    </div>
 
-                    <div className="flex items-start group">
-                      <div className="w-6 h-6 bg-purple-400 rounded-full relative z-10 mr-8 shadow-[0_0_20px_rgba(192,132,252,0.8)] group-hover:scale-125 transition-transform duration-300 animate-pulse" style={{animationDelay: '0.6s'}}></div>
-                      <div className="text-white transform group-hover:translate-x-2 transition-transform duration-300 bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-purple-400/50 transition-colors">
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">Worked in Criminal Organization</h3>
-                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                          Rose through the ranks of the criminal underworld. 
-                          Planned and executed major heists and operations across the city.
-                        </p>
-                      </div>
-                    </div>
 
-                    <div className="flex items-start group">
-                      <div className="w-6 h-6 bg-purple-400 rounded-full relative z-10 mr-8 shadow-[0_0_20px_rgba(192,132,252,0.8)] group-hover:scale-125 transition-transform duration-300 animate-pulse" style={{animationDelay: '0.8s'}}></div>
-                      <div className="text-white transform group-hover:translate-x-2 transition-transform duration-300 bg-gray-800/30 p-6 rounded-lg backdrop-blur-sm border border-gray-700/50 hover:border-purple-400/50 transition-colors">
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">Worked as Independent Contractor</h3>
-                        <p className="text-lg text-gray-300 font-[Helvetica_Now_Display]">
-                          Now operating as a freelance criminal for hire. 
-                          Taking on the most dangerous and lucrative jobs in Los Santos.
-                        </p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          
+
 
           {/* Interactive Image Reveal Section */}
           <div className="w-full min-h-screen bg-gradient-to-b from-black to-gray-900 py-20 relative overflow-hidden">
@@ -576,9 +583,9 @@ function App() {
 
                 {/* Right Text - Coder */}
                 <div className="text-right flex-1 max-w-xs">
-                  <h3 className="text-white text-5xl font-black mb-4 tracking-wider font-mono">&lt;coder&gt;</h3>
+                  <h3 className="text-white text-5xl font-black mb-4 tracking-wider font-mono">&lt;developer&gt;</h3>
                   <p className="text-gray-300 text-lg leading-relaxed">
-                    Front end developer who writes clean, elegant and efficient code.
+                    It worked on my local.
                   </p>
                   <div className="mt-4 text-sm text-gray-500 font-mono">
                     <div>&lt;html&gt;</div>
@@ -607,40 +614,34 @@ function App() {
                 <h3 className="text-white text-2xl font-bold mb-2">Let's Stay Connected</h3>
                 <p className="text-gray-400 text-sm">Follow for updates and collaborations</p>
               </div>
-              
+
               {/* Simple Social Media Links */}
               <div className="flex justify-center gap-4">
-                <a href="#" className="group">
+                <a href="https://www.linkedin.com/in/anushkapandey2911/" className="group">
                   <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-blue-500 hover:scale-110">
                     <i className="ri-linkedin-fill text-lg text-white"></i>
                   </div>
                 </a>
-                
+
                 <a href="#" className="group">
                   <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-gray-700 hover:scale-110">
                     <i className="ri-twitter-x-line text-lg text-white"></i>
                   </div>
                 </a>
-                
-                <a href="#" className="group">
+
+                <a href="https://github.com/anushkapandeyyy" className="group">
                   <div className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-gray-700 hover:scale-110">
                     <i className="ri-github-line text-lg text-white"></i>
                   </div>
                 </a>
-                
-                <a href="#" className="group">
-                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-purple-500 hover:scale-110">
-                    <i className="ri-instagram-line text-lg text-white"></i>
-                  </div>
-                </a>
-                
-                <a href="#" className="group">
+
+                <a href="mailto:anushkapandey2915@gmail.com" className="group">
                   <div className="w-12 h-12 bg-purple-400 rounded-full flex items-center justify-center transition-all duration-300 hover:bg-purple-300 hover:scale-110">
                     <i className="ri-mail-line text-lg text-white"></i>
                   </div>
                 </a>
               </div>
-              
+
               {/* Minimal Copyright */}
               <div className="text-center mt-8 pt-6 border-t border-gray-800/50">
                 <p className="text-gray-500 text-xs">© 2024 Portfolio. Built with passion.</p>
@@ -648,7 +649,7 @@ function App() {
             </div>
           </div>
 
-          
+
         </div>
       )}
     </>
