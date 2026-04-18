@@ -7,11 +7,13 @@
 
 html,
 body {
+  margin: 0cm;
   width: 100%;
   height: 100%;
   font-family: "pricedown";
   scroll-behavior: smooth;
   overflow-x: hidden;
+  
 }
 
 * {
@@ -498,4 +500,30 @@ button:active {
 
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.global-site-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1; /* Puts it behind everything */
+  background-image: url('/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.scanlines {
+  position: relative;
+  left: 0.5%;
+  width: 100vw !important;   /* was 100vw — change to 100% */
+  background-color: #000000d0;
 }
